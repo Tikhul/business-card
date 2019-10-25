@@ -7,6 +7,6 @@ public class Instagram : MonoBehaviour
     // Open Instagram on click
     public void InstagramOpen()
     {
-        Application.OpenURL("instagram://user?blackvrar={blackvrar}");
+        Application.OpenURL("instagram://user?blackvrar={BLACKVRAR}");
     }
 }
