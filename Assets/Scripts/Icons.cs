@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class Icons : MonoBehaviour
 {
-    private float speed = 0.5f;
-    public void IconsRotation()
+    public void Calling()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, 
-            new Quaternion(transform.rotation.x, transform.rotation.y + 180, transform.rotation.z, transform.rotation.w),
-            speed * Time.deltaTime);
+        Application.OpenURL("tel://+79686640245");
+    }
+
+    public void Messaging()
+    {
+        Application.OpenURL("sms:+79686640245");
+    }
+
+    public void Telegraming()
+    {
+        Application.OpenURL("https://t.me/pashaivanov");
+    }
+
+    public void Emailing()
+    {
+        Application.OpenURL("mailto:pavel@blackvr.org");
     }
 }
