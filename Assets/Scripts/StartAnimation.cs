@@ -8,6 +8,7 @@ public class StartAnimation : MonoBehaviour
     public GameObject userpic;
     public GameObject video;
     public GameObject buttons;
+    public GameObject icons;
     // Gameobjects' initial positions
     private Vector3 userpicInitialPos;
     private Vector3 videoInitialPos;
@@ -16,12 +17,12 @@ public class StartAnimation : MonoBehaviour
     private Vector3 userpicTargetPos;
     private Vector3 videoTargetPos;
     private Vector3 buttonsTargetPos;
-
     // Business card image target
     public ImageTargetBehaviour image;
-
     // Gameobjects' speed
-    private float speed = 7f;
+    private float speed = 3f;
+    // Icons array
+    public GameObject[] iconsContainer = new GameObject[4];
 
     public void Start()
     {
@@ -58,6 +59,7 @@ public class StartAnimation : MonoBehaviour
         userpic.SetActive(false);
         video.SetActive(false);
         buttons.SetActive(false);
+        icons.SetActive(false);
         userpic.transform.localPosition = userpicInitialPos;
         video.transform.localPosition = videoInitialPos;
         buttons.transform.localPosition = buttonsInitialPos;
@@ -71,7 +73,12 @@ public class StartAnimation : MonoBehaviour
         userpic.transform.localPosition = Vector3.Lerp(userpic.transform.localPosition, userpicTargetPos, speed * Time.deltaTime);
         video.transform.localPosition = Vector3.Lerp(video.transform.localPosition, videoTargetPos, speed * Time.deltaTime);
         buttons.transform.localPosition = Vector3.Lerp(buttons.transform.localPosition, buttonsTargetPos, speed * Time.deltaTime);
+        StartCoroutine(ActivateIcons());
     }
 
-    
+    IEnumerator ActivateIcons()
+    {
+        yield return new WaitForSeconds(1);
+        icons.SetActive(true);
+    }
 }
