@@ -1,7 +1,4 @@
-﻿// full tutorial here:
-// https://medium.com/@harmittaa/setting-camera-focus-mode-for-vuforia-arcamera-in-unity-6b3745297c3d
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using Vuforia;
 
