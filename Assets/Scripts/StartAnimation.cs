@@ -21,8 +21,7 @@ public class StartAnimation : MonoBehaviour
     public ImageTargetBehaviour image;
     // Gameobjects' speed
     private float speed = 3f;
-    // Icons array
-    public GameObject[] iconsContainer = new GameObject[4];
+    
 
     public void Start()
     {
@@ -31,12 +30,12 @@ public class StartAnimation : MonoBehaviour
         videoInitialPos = video.transform.localPosition;
         buttonsInitialPos = buttons.transform.localPosition;
         // Gameobjects' target positions
-        userpicTargetPos = new Vector3(userpic.transform.localPosition.x + 5.44f, 
+        userpicTargetPos = new Vector3(userpic.transform.localPosition.x + 5.77f, 
             userpic.transform.localPosition.y, userpic.transform.localPosition.z);
-        videoTargetPos = new Vector3(video.transform.localPosition.x,
-            video.transform.localPosition.y, video.transform.localPosition.z - 0.6f);
-        buttonsTargetPos = new Vector3(buttons.transform.localPosition.x + 7.19f,
-            buttons.transform.localPosition.y - 4.23f, buttons.transform.localPosition.z);
+        videoTargetPos = new Vector3(video.transform.localPosition.x + 1.048f,
+            video.transform.localPosition.y, video.transform.localPosition.z - 0.577f);
+        buttonsTargetPos = new Vector3(buttons.transform.localPosition.x,
+            buttons.transform.localPosition.y - 3.45f, buttons.transform.localPosition.z);
 
 }
     // Update is called once per frame
